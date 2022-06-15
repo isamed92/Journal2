@@ -1,14 +1,32 @@
 // import { MailOutline } from "@mui/icons-material"
-import { Typography } from '@mui/material';
+import { AddOutlined } from '@mui/icons-material';
+import { IconButton, Typography } from '@mui/material';
 import { JournalLayout } from '../layout/JournalLayout';
+import { NoteView, NothingSelectedView } from '../views';
 
 export const JournalPage = () => {
   return (
     <JournalLayout>
+        {/* <NothingSelectedView/> */}
+
+        <NoteView/>
+
+        <IconButton
+        size='large'
+          sx={{
+            color: 'white',
+            backgroundColor: 'error.main',
+            ':hover': {backgroundColor: 'error.main', opacity: 0.9},
+            position: 'fixed',
+            right: 50,
+            bottom: 50,
+          }}
+        >
+          <AddOutlined sx={{
+            fontSize: 30
+          }}/>
+        </IconButton>
         
-        <Typography>
-          Sint sint ut minim cillum proident ullamco ut elit. Consectetur enim reprehenderit do ex velit duis magna sit. Adipisicing deserunt cupidatat amet eu. Sit dolore elit ullamco amet excepteur ex Lorem sunt amet fugiat sint mollit tempor aliquip. Laboris fugiat consectetur enim dolore commodo.
-        </Typography>
     </JournalLayout>
   );
 };
