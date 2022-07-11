@@ -1,12 +1,12 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { AuthRoutes } from '../auth/routes/AuthRoutes';
-import { useCheckout } from '../hooks';
+import { useCheckAuth } from '../hooks';
 import { JournalRoutes } from '../journal/routes/JournalRoutes';
 import { CheckingOut } from '../ui';
 
 export const AppRouter = () => {
-  const status = useCheckout()
+  const status = useCheckAuth()
 
   if (status === 'checking') return <CheckingOut />;
 

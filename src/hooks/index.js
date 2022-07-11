@@ -1,2 +1,2 @@
 export * from './useForm'
-export * from './useCheckout'
+export * from './useCheckAuth'
